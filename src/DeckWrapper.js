@@ -13,9 +13,16 @@ const DeckWrapper = () => {
         getDeckId()
     }, [])
 
+    async function getCard(deckId) {
+        const res = await axios.get(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`);
+        const newCard = res.data.cards[0].image;
+        return newCard;
+        
+    }
+
     return (
         <div>
-            <Deck deckId={deckId} />
+            <Deck deckId={deckId} getCard={getCard} />
         </div>
     )
 }
