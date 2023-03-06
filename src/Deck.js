@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Deck = ({ getCard }) => {
+const Deck = ({ newCard, getCard }) => {
 
 
     return (
@@ -10,7 +10,7 @@ const Deck = ({ getCard }) => {
                 <button onClick={getCard}>Gimme a card!</button>
             </div>
             <div>
-                <img src={card} />
+                <img src={newCard} />
             </div>  
         </div>
     )

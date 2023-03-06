@@ -22,7 +22,7 @@ const DeckWrapper = () => {
 
     return (
         <div>
-            <Deck deckId={deckId} getCard={getCard} />
+            <Deck deckId={deckId} getCard={getCard} newCard={newCard}/>
         </div>
     )
 }
